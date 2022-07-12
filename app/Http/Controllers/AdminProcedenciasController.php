@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminSolicitudProteses18Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminProcedenciasController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -25,46 +25,22 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "solicitud_proteses";
+			$this->table = "procedencias";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Articulo","name"=>"articulo"];
-			$this->col[] = ["label"=>"Estado Paciente","name"=>"estado_paciente"];
-			$this->col[] = ["label"=>"Fecha Solicitud","name"=>"fecha_solicitud"];
-			$this->col[] = ["label"=>"Instituto Internacion","name"=>"instituto_internacion"];
-			$this->col[] = ["label"=>"Medico Id","name"=>"medico_id"];
-			$this->col[] = ["label"=>"Necesidad","name"=>"necesidad"];
-			$this->col[] = ["label"=>"NroAfiliado","name"=>"nroAfiliado","join"=>"afiliados,apeynombres"];
+			$this->col[] = ["label"=>"Procedencia","name"=>"procedencia"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Articulo','name'=>'articulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Estado Paciente','name'=>'estado_paciente','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Fecha Solicitud','name'=>'fecha_solicitud','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Instituto Internacion','name'=>'instituto_internacion','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Medico Id','name'=>'medico_id','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Necesidad','name'=>'necesidad','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'NroAfiliado','name'=>'nroAfiliado','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Observacion','name'=>'observacion','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Ortopedia Id','name'=>'ortopedia_id','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Solicitud Id','name'=>'solicitud_id','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Procedencia','name'=>'procedencia','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Articulo","name"=>"articulo","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Estado Paciente","name"=>"estado_paciente","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Fecha Solicitud","name"=>"fecha_solicitud","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Instituto Internacion","name"=>"instituto_internacion","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Medico Id","name"=>"medico_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"medico,id"];
-			//$this->form[] = ["label"=>"Necesidad","name"=>"necesidad","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"NroAfiliado","name"=>"nroAfiliado","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Observacion","name"=>"observacion","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Ortopedia Id","name"=>"ortopedia_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"ortopedia,id"];
-			//$this->form[] = ["label"=>"Solicitud Id","name"=>"solicitud_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"solicitud,id"];
+			//$this->form[] = ["label"=>"Procedencia","name"=>"procedencia","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 
