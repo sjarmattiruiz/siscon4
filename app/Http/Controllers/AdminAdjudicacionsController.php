@@ -98,6 +98,10 @@
 	        | 
 	        */
 	        $this->addaction = array();
+			$this->addaction[] = ['label'=>'ANULAR','url'=>'http://localhost:8000/api/update_estado?id=[id]','icon'=>'fa fa-check','color'=>'danger', 'showIf'=>'[estado] == "5"','confirmation'=>true];
+			$this->addaction[] = ['label'=>'AUTORIZADA','url'=>'http://localhost:8000/api/cotizacion?id=[id]&apeynombre=[apeynombre]&fecha_cirugia=[fecha_cirugia]&necesidad=[necesidad]&clinica=[clinica]&observacion=[observacion]&aposid=[aposid]&articulos=[articulos]&estado=[estado]','icon'=>'fa fa-check','color'=>'success', 'showIf'=>'[estado] == "4"'];
+
+
 
 
 	        /* 

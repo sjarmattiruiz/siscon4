@@ -105,6 +105,8 @@
 	        | 
 	        */
 	        $this->addaction = array();
+			$this->addaction[] = ['label'=>'PENDIENTE DE ADJUDICACION','url'=>'#','icon'=>'fa fa-check','color'=>'warning', 'showIf'=>'[estado] == "2"'];
+			$this->addaction[] = ['label'=>'SOLICITUD ADJUDICADA','url'=>'#','icon'=>'fa fa-check','color'=>'success', 'showIf'=>'[estado] == "3"'];
 
 
 	        /* 

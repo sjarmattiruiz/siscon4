@@ -296,7 +296,8 @@
 	    | @id = last insert id
 	    | 
 	    */
-	    public function hook_after_add($id) {        
+	    public function hook_after_add($id) {     
+			$postdata['estado'] = 1;   
 	        //Your code here
 	    }
 
@@ -308,7 +309,8 @@
 	    | @id       = current id 
 	    | 
 	    */
-	    public function hook_before_edit(&$postdata,$id) {        
+	    public function hook_before_edit(&$postdata,$id) {   
+			$postdata['estado'] = 1;     
 	        //Your code here
 
 	    }
@@ -321,6 +323,7 @@
 	    | 
 	    */
 	    public function hook_after_edit($id) {
+			$postdata['estado'] = 1;
 	        //Your code here 
 
 	    }
