@@ -101,7 +101,8 @@
 	        | 
 	        */
 	        $this->addaction = array();
-			$this->addaction[] = ['label'=>'COTIZAR','url'=>'http://localhost:8000/api/update_estado?id=[id]','icon'=>'fa fa-check','color'=>'warning', 'showIf'=>'[estado] == "1"','confirmation'=>true];
+			$this->addaction[] = ['label'=>'COTIZAR','url'=>CRUDBooster::mainpath('set-status/active/[id]'),'icon'=>'fa fa-check','color'=>'warning','showIf'=>'[estado] == "1"'];
+			//$this->addaction[] = ['label'=>'COTIZAR','url'=>'http://localhost:8000/api/update_estado?id=[id]','icon'=>'fa fa-check','color'=>'warning', 'showIf'=>'[estado] == "1"','confirmation'=>true];
 			$this->addaction[] = ['label'=>'COTIZADA','url'=>'http://localhost:8000/api/cotizacion?id=[id]&apeynombre=[apeynombre]&fecha_cirugia=[fecha_cirugia]&necesidad=[necesidad]&clinica=[clinica]&observacion=[observacion]&aposid=[aposid]&articulos=[articulos]&estado=[estado]','icon'=>'fa fa-check','color'=>'success', 'showIf'=>'[estado] == "2"'];
 			$this->addaction[] = ['label'=>'URGENTE','url'=>'#','icon'=>'fa fa-exclamation-triangle','color'=>'danger', 'showIf'=>'[necesidad] == "1"'];
 			$this->addaction[] = ['label'=>'PROGRAMADA','url'=>'#','icon'=>'fa fa-calendar-check-o','color'=>'success', 'showIf'=>'[necesidad] == "2"'];
@@ -355,13 +356,13 @@
 		public function tableput(){
 			
 		}
-		
-		public function getSetStatus($estado,$id) {
-			DB::table('sol_entrantes')->where('id',$id)->update(['estado'=>$estado]);
-			
+
+		public function getSetStatus($status,$id) {
+			DB::table('sol_entrantes')->where('id',$id)->update(['estado'=>"2"]);
 			//This will redirect back and gives a message
-			CRUDBooster::redirect($_SERVER['HTTP_REFERER'],"The status has been updated !","info");
+			CRUDBooster::redirect($_SERVER['HTTP_REFERER'],"The status product has been updated !","info");
 		 }
+		
 	    //By the way, you can still create your own method in here... :) 
 
 		// public function fill_data($id)
